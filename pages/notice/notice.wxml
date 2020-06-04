@@ -1,0 +1,6 @@
+<!--pages/notice/notice.wxml-->
+<view class="wrap"  style='margin-bottom:{{btuBottom}}'>
+<image src="https://mini-program-jiujiang.oss-cn-shanghai.aliyuncs.com/page/Precautions.png"  mode="widthFix"></image>
+ <!-- 拨打电话 -->
+ <view class='footer_list2' data-id='4' catchtap='freeTell' data-current="4" bindtap="chooseImg"> </view>
+ </view>

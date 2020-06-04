@@ -1,0 +1,34 @@
+<!--pages/handle/handle.wxml-->
+<view class="wrap">
+  <view>
+    <view class="no_data" wx:if="{{lists}}">
+      <image src="/image/no.png"></image>
+      <view>暂无数据</view>
+    </view>
+    <view wx:for="{{list}}" class="stores" wx:key="{{index}}">
+      <view class="conter">
+        <view class="conters">
+          <text>操作门店</text>
+          <text>{{item.shopName}}</text>
+        </view>
+        <view class="conters">
+          <text>操作项目</text>
+          <text>{{item.serviceName}}</text>
+        </view>
+        <view class="conters">
+          <text>具体项目</text>
+          <text>{{item.operateProject}}</text>
+        </view>
+        <view class="conters">
+          <text>操作时间</text>
+          <text>{{item.create_time}}</text>
+        </view>
+        <view class="conters">
+          <text>操作老师</text>
+          <text>{{item.teacher}}</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

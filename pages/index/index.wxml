@@ -1,0 +1,95 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 用户基本资料 -->
+  <view class="material">
+    <block >
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  
+  <!-- 轮播图 -->
+  <view class='test' style=" width: 100%;overflow-x: hidden;">
+    <swiper display-multiple-items='1' class="swiper-block" circular previous-margin="50rpx" next-margin="50rpx" bindchange="swiperChange" current='{{current}}' easing-function="easeOutCubic" scroll-x="false"> 
+      <block wx:for="{{items}}" wx:key='{{index}}'>
+        <swiper-item class="swiper-item" >
+          <image src="{{item.cardPicUrl}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}" bindtap="binlick" id="{{item.cardNum}}" data-item="{{item.cardName}}"  data-status="{{item.status}}"/>
+        <view class="content">
+            <view>{{item.cardName}}</view>
+            <view>{{item.cardNumShow}}</view>
+            <!-- <view wx:if="{{hasUserInfo}}">
+               <button  class="pop_btn" plain="true" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber" id="{{item.cardNum}}" data-item="{{item.cardName}}" style="border:none;margin: 0;padding: 0;font-size:32rpx;font-family:PingFang SC;font-weight:bold;color:rgba(255,255,255,1);width: 300rpx; min-height: 48rpx !important;margin-top: 30rpx;background-color:transparent;"></button>
+        </view> -->
+                <!-- <image wx:if= "{{item.cardType == 1 && item.status == 1 }}" src="/image/ceng.png" class="btns" bindtap="tattoo" id="{{item.cardNum}}"  data-item="{{item.cardName}}"></image>
+                <image wx:elif="{{item.cardType == 2 && item.status == 1}}" src="/image/chise.png" class="btns" bindtap="line" id="{{item.cardNum}}"  data-item="{{item.cardName}}"></image>
+                <image wx:elif= "{{item.cardType == 4 && item.status == 1}}" src="/image/danse.png" class="btns" bindtap="crystal" id="{{item.cardNum}}"  data-item="{{item.cardName}}"></image>
+                <image wx:elif= "{{item.cardType == 3 && item.status == 1}}" src="/image/fense.png" class="btns" bindtap="hairline" id="{{item.cardNum}}"  data-item="{{item.cardName}}"></image> -->
+              <!-- <view wx:else class="times">{{item.time}}</view> -->
+              <view wx:if="{{item.status == 2}}" src="{{item.bttons}}" class="validity" bindtap="binlick">有效期至{{item.endTime}}</view>
+        </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view style=" background: #f7f7f7;width:100%;height:30rpx;">
+    </view>
+  </view>
+   <!-- 具体内容  -->
+   <view class="conter">
+   <!-- 操作记录 -->
+      <view class="operate" bindtap="handle">
+         <image src="/image/1.png" class="title_img"></image>
+         <text>操作记录</text>
+         <image src="/image/open.png" class="open"></image>
+       </view>
+    <!-- 维护记录-->
+       <view class="operate" bindtap="tenance">
+         <image src="/image/4.png" style="width:36rpx;height:40rpx;padding-left: 30rpx;"></image>
+         <text>维护记录</text>
+         <image src="/image/open.png" class="open"></image>
+       </view>
+    <!-- 售后卡使用规则-->
+       <view class="operate" bindtap="rules">
+         <image src="/image/3.png" style="width:36rpx;height:40rpx;padding-left: 30rpx;"></image>
+         <text>售后卡使用规则</text>
+         <image src="/image/open.png" class="open"></image>
+       </view>
+    <!-- 注意事项-->
+       <view class="operate" bindtap="notice">
+         <image src="/image/6.png" style="width:41rpx;height:47rpx;padding-left: 30rpx;"></image>
+         <text style="margin-left:30rpx">注意事项</text>
+         <image src="/image/open.png" class="open"></image>
+       </view>
+    <!-- 福利-->
+       <view class="operate" bindtap="welfare">
+         <image src="/image/2.png" style="width:37rpx;height:32rpx;padding-left: 30rpx;"></image>
+         <text>福利</text>
+         <image src="/image/open.png" class="open" ></image>
+       </view>
+    <!-- 客服-->
+       <view class="operate">
+         <image src="/image/5.png" style="width:37rpx;height:41rpx;padding-left: 30rpx;"></image>
+        <button open-type="contact" bindcontact="handleContact" style="font-size:30rpx;font-family:PingFang SC;color:rgba(20,20,20,1);border:none;margin: 0;padding: 0; background-color:transparent; position: absolute;width:750rpx;color:#ffffff;">客服</button>
+         <text style="  margin-left: 35rpx;">客服</text>
+         <image src="/image/open.png" class="open"></image>
+       </view>
+   </view>
+   <!-- 客服电话 -->
+      <!-- <view class="service">
+       <text>客服电话：123456789</text>
+      </view> -->
+
+
+  <!-- 弹框 -->
+  <!-- <view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-content">
+    <view class="modal-input">
+      <input maxlength="19" placeholder-class="input-holder" bindinput="inputChange" class="input"></input>
+    </view>
+    <view class="modal-tips">
+      {{ activateMsg }}
+    </view>
+  </view>
+  <view class="btn-confirm" bindtap="hideDialogModal" data-status="confirm">确定</view>
+</view> -->
+</view>

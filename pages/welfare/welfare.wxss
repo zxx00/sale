@@ -1,0 +1,24 @@
+/* pages/welfare/welfare.wxss */
+page {
+width: 100%;
+}
+
+image{
+  width: 750rpx;
+  background-size: 100% 100%; 
+}
+/* 公司监督电话 */
+.footer_list2{
+  position: absolute;
+  height: 40rpx;
+  width: 100%;
+  top: 950rpx;
+}
+
+/* 反馈电话 */
+.footer_list{
+  position: absolute;
+  height: 40rpx;
+  width: 100%;
+  top: 1036rpx;
+}

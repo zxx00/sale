@@ -1,0 +1,65 @@
+<!--pages/home/home.wxml-->
+<view class="wrap">
+  <view class="top">
+    <image wx:if="{{userinfos}}" src="/image/06.png"></image>
+    <view wx:if="{{userinfos}}" class="register" bindtap="binlicks">立即登录</view>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+      <view class="integral">
+       <view wx:if="{{hasUserInfo  || userinfos}}" class="coupono">--</view>
+      <view wx:else class="number">{{integral}}</view>
+      <view class="integratel">可用积分</view>
+    </view>
+  </view>
+  <!-- 优惠券与售后卡 -->
+  <view class="synthesis">
+    <view class="coupon" bindtap="coupons">
+      <view wx:if="{{hasUserInfo  || userinfos}}" class="coupono">--</view>
+      <view wx:else class="number">{{couponCount}}</view>
+      <view class="couponclip">优惠券</view>
+    </view>
+    <!-- <view class=""></view> -->
+    <!-- 售后卡 -->
+    <view class="afterCard" bindtap="after_sale">
+      <view wx:if="{{hasUserInfo  || userinfos}}" class="nothing">--</view>
+      <view wx:else class="number">{{userAfterCardCount}}</view>
+      <view class="afterCardClip">售后卡</view>
+    </view>
+  </view>
+  <!-- 优惠券领取 -->
+    <view class="core">
+      <view class="title">领取中心</view>
+      <view class="corelist" wx:for="{{couList}}" wx:key='{{index}}' id="{{item.promotionCouponUid}}" data-item="{{item.cardName}}" wx:if ="{{item.status === 1 || item.status === 2}}">
+        <image src="{{item.pic}}"></image>
+        <view class="coreters">
+          <view class="coreLeft">
+            <view class="coreMoney">
+              <view>￥</view>
+              <view>{{item.amount}}</view>
+            </view>
+            <view class="rule">{{item.program}}</view>
+          </view>
+          <view class="coreConter">
+            <view>{{item.name}}</view>
+            <view>{{item.rule}}</view>
+          </view>
+          <view class="coreRight" bindtap="binlick" id="{{item.promotionCouponUid}}" data-name="{{item.name}}" wx:if= "{{item.status == 1}}" data-rule="{{item.rule}}" data-program="{{item.program}}" data-amount="{{item.amount}}">领取</view>
+          <view class="employ" bindtap="binlickemploy" wx:if= "{{item.status == 2}}" data-code="{{item.code}}" data-name="{{item.name}}" data-validity="{{item.validity}}" data-showCode="{{item.showCode}}">去使用</view>
+        </view>
+      </view>
+    </view>
+   <!-- 无优惠券 -->
+    <view class="draw_state" wx:if="{{contentlists}}">
+      <image src="/image/07.png"></image>
+      <view>暂无优惠券</view>
+     </view>
+<!--弹窗-->
+<view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <image src="/image/01.png"></image>
+  <view class="modal-content">{{msg}}</view>
+  <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定</view>
+</view>
+</view>

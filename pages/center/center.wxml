@@ -1,0 +1,8 @@
+<!--pages/center/center.wxml-->
+<view class="wrap">
+<image src="/image/card.png"></image>
+<view class="name">
+ <text>{{name}}</text>
+</view>
+<canvas class='canvas' style="width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;" canvas-id='canvas' bindlongtap='save'></canvas>
+</view>

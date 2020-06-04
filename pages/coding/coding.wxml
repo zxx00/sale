@@ -1,0 +1,26 @@
+<!--pages/coding/coding.wxml-->
+<view class="wrap">
+<view style="   text-align: center;">
+<image src="/image/logo.png"></image>
+</view>
+<view class="name">
+ <text>{{name}}</text>
+ <view class="indate">
+    <view>有效期</view>
+    <view>{{validity}}</view>
+ </view>
+</view>
+<canvas class='canvas' style="width:{{qrcodeWidth}}px; height:{{qrcodeWidth}}px;" canvas-id='canvas' bindlongtap='save'></canvas>
+<view class="encoding">{{showCode}}</view>
+<!-- 使用规则 -->
+<view class="rule">
+   <view>使用规则</view>
+   <view class="detail">1、优惠券是仅限在乐融商城使用，按面值总额减免支付的优惠码。乐融商</view>
+<view class="detail">2、优惠券分三种：满减券、免邮券、以旧换新优惠券。</view>
+<view class="detail">3、优惠券获取方式：通过乐融商城的买赠、活动参与等形式获取。</view>
+<view class="detail">4、使用满减券、免邮券提交的订单，在订单未支付时取消订单，</view>
+<view class="detail">5、使用优惠券的订单退货，优惠券不予返还。</view>
+<view class="detail">6、优惠券不能进行兑现、出售、转让或其他用途。</view>
+<view class="detail">7、本规则由乐融商城依据国家相关法律法规及规章制度予以解释。</view>
+</view>
+</view>

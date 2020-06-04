@@ -1,0 +1,6 @@
+<!--pages/mobile/mobile.wxml-->
+<view class="wrap">
+ <image  src="/image/logo.png" class="userinfo-avatar"></image>
+ <view>恒久匠心 极致创意</view>
+  <button  plain="true" open-type='getPhoneNumber' bindgetphonenumber="getPhoneNumber" id="{{item.cardNum}}" data-item="{{item.cardName}}"  style="font-family:PingFang SC;font-weight:bold;color:black;font-size:32rpx; !important;background-color:#85C5DB;color:rgba(255,255,255,1);margin-top:30%;width:600rpx;border:none;">授权手机号</button>
+</view>

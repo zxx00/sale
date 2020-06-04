@@ -1,0 +1,8 @@
+<!--pages/welfare/welfare.wxml-->
+<view class="wrap" style='margin-bottom:{{btuBottom}}'>
+<image src="https://mini-program-jiujiang.oss-cn-shanghai.aliyuncs.com/page/CashBack.png" mode="widthFix"></image>
+ <!-- 公司监督电话 -->
+ <view class='footer_list2' data-id='4' catchtap='freeTell' data-current="4" > </view>
+ <!-- 反馈电话 -->
+  <view class='footer_list' data-id='4' catchtap='chooseImg' data-current="4" > </view>
+ </view>

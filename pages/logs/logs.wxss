@@ -1,0 +1,18 @@
+/* pages/logs/logs.wxss */
+.wrap{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+image{
+  width: 200rpx;
+  height: 200rpx;
+}
+view{
+font-size:36rpx;
+font-family:Xingkai TC;
+font-weight:300;
+color:rgba(84,166,194,1);
+margin-top: 30rpx;
+}

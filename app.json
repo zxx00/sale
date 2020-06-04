@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/center/center",
+    "pages/handle/handle",
+    "pages/tenance/tenance",
+    "pages/rules/rules",
+    "pages/notice/notice",
+    "pages/welfare/welfare",
+    "pages/logs/logs",
+    "pages/coupon/coupon",
+    "pages/mobile/mobile",
+    "pages/coding/coding"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "久匠售后",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

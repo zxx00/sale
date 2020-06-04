@@ -1,0 +1,78 @@
+<!--pages/coupon/coupon.wxml-->
+<view class='topTabSwiper'>
+  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>可使用</view>
+  <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>已使用</view>
+  <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>已过期</view>
+</view>
+<swiper current="{{currentData}}" class='swiper' duration="300" bindchange="bindchange" style="height:{{aheight}}rpx">
+  <swiper-item >
+    <view class="corelist" wx:for="{{couList}}" wx:key='{{index}}' id="{{item.cardNum}}" data-item="{{item.cardName}}">
+      <image src="{{item.pic}}"></image>
+      <view class="coreters">
+        <view class="coreLeft">
+          <view class="coreMoney">
+            <view>￥</view>
+            <view>{{item.amount}}</view>
+          </view>
+          <view class="rule">{{item.program}}</view>
+        </view>
+        <view class="coreConter">
+          <view>{{item.promotionCouponName}}</view>
+          <view>{{item.rule}}</view>
+          <view>{{item.validity}}</view>
+        </view>
+        <view class="coreRight" bindtap="binlick" data-code="{{item.code}}" data-name="{{item.promotionCouponName}}" data-validity="{{item.validity}}" data-showCode="{{item.showCode}}">去使用</view>
+      </view>
+    </view>
+    <view class="Noavailable" wx:if="{{contentlists1}}">
+      <image src="/image/07.png"></image>
+      <view>暂无优惠券</view>
+    </view>
+  </swiper-item>
+  <swiper-item >
+    <view class="corelist" wx:for="{{usedList}}" wx:key='{{index}}' id="{{item.cardNum}}" data-item="{{item.cardName}}">
+      <image src="{{item.pic}}"></image>
+      <view class="coreters">
+        <view class="coreLeft">
+          <view class="coreMoney">
+            <view>￥</view>
+            <view>{{item.amount}}</view>
+          </view>
+          <view class="rule">{{item.program}}</view>
+        </view>
+        <view class="coreConters">
+          <view>{{item.promotionCouponName}}</view>
+          <view>{{item.rule}}</view>
+          <view>{{item.validity}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="Noavailable" wx:if="{{contentlists2}}">
+      <image src="/image/07.png"></image>
+      <view>暂无优惠券</view>
+    </view>
+  </swiper-item>
+  <swiper-item >
+    <view class="corelist" wx:for="{{pastList}}" wx:key='{{index}}' id="{{item.cardNum}}" data-item="{{item.cardName}}">
+      <image src="{{item.pic}}"></image>
+      <view class="coreters">
+        <view class="coreLeft">
+          <view class="coreMoney">
+            <view>￥</view>
+            <view>{{item.amount}}</view>
+          </view>
+          <view class="rule">{{item.program}}</view>
+        </view>
+        <view class="coreConters">
+          <view>{{item.promotionCouponName}}</view>
+          <view>{{item.rule}}</view>
+          <view>{{item.validity}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="Noavailable" wx:if="{{contentlists3}}">
+      <image src="/image/07.png"></image>
+      <view>暂无优惠券</view>
+    </view>
+  </swiper-item>
+</swiper>

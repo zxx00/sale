@@ -1,0 +1,13 @@
+/* pages/notice/notice.wxss */
+page{
+  width: 100%;
+}
+image{
+  width: 750rpx;
+}
+.footer_list2{
+  position: absolute;
+  width: 100%; 
+  height: 40rpx;
+  top: 1256rpx;
+}

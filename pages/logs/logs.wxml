@@ -1,0 +1,6 @@
+<!--pages/logs/logs.wxml-->
+<view class="wrap">
+ <image  src="/image/logo.png" class="userinfo-avatar"></image>
+ <view>恒久匠心 极致创意</view>
+  <button  open-type="getUserInfo" bindgetuserinfo="getUserInfo"  style="font-family:PingFang SC;font-weight:bold;color:black;font-size:32rpx; !important;background-color:#85C5DB;color:rgba(255,255,255,1);margin-top:30%;width:600rpx;">微信授权</button>
+</view>

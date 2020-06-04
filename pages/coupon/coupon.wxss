@@ -1,0 +1,184 @@
+/* pages/coupon/coupon.wxss */
+page{
+  background-color: #F9F9F9;
+  height: 100%;
+}
+.tab {
+text-align: center;
+font-size:32rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:#999999;
+padding: 10rpx 0;
+margin-left: 75rpx;
+
+}
+
+.topTabSwiper {
+  zoom: 1;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
+
+}
+
+.topTabSwiper:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+.tabBorer {
+border-bottom: 4rpx solid #4B9FB2;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(51,51,51,1);
+}
+
+.swiper {
+  width: 100%;
+}
+
+.swiper_con {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 80rpx 0;
+}
+
+/* 优惠券未使用 */
+
+.corelist {
+  position: relative;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.coreters{
+  display: flex;
+  margin-left: 15rpx;
+  position: absolute;
+  top: 15rpx;
+  align-items: center;
+}
+.coreLeft{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 244rpx;  
+}
+.coreMoney{
+  display: flex;
+  align-items: flex-end;
+}
+.coreMoney view:nth-child(1){
+font-size:42rpx;
+font-family:Source Han Sans CN;
+font-weight:500;
+color:rgba(255,255,255,1);
+}
+.coreMoney view:nth-child(2){
+font-size:60rpx;
+font-family:MF ShangYa (Noncommercial);
+font-weight:400;
+color:rgba(255,255,255,1);
+}
+.coreConter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 297rpx;
+}
+.coreConter view:nth-child(1){
+font-size:28rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(51,51,51,1);
+padding-top: 10rpx;
+}
+.coreConter view:nth-child(2){
+font-size:20rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(102,102,102,1);
+padding-top: 10rpx;
+}
+.coreConter view:nth-child(3){
+font-size:19rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(102,102,102,1);
+padding-top: 20rpx;
+}
+.corelist image{
+  height: 180rpx;
+  width: 690rpx;
+}
+.rule{
+font-size:24rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(255,255,255,1);
+margin-left: 25rpx;
+}
+
+.coreRight{
+  margin-left: 35rpx;
+width:104rpx;
+height:40rpx;
+background:linear-gradient(180deg,rgba(133,204,219,1) 0%,rgba(158,216,229,1) 100%);
+border-radius:20rpx;
+font-size:26rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(255,255,255,1);
+line-height: 40rpx;
+}
+
+/* 已使用的优惠券 */
+.coreConters{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 297rpx;
+}
+.coreConters view:nth-child(1){
+font-size:28rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(207,207,207,1);
+padding-top: 10rpx;
+}
+.coreConters view:nth-child(2){
+font-size:20rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(207,207,207,1);
+padding-top: 10rpx;
+}
+.coreConters view:nth-child(3){
+font-size:19rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(207,207,207,1);
+padding-top: 20rpx;
+}
+
+
+/* 暂无优惠券 */
+.Noavailable{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 285rpx;
+}
+.Noavailable image{
+  width: 296rpx;
+  height: 270rpx;
+}
+.Noavailable view{
+font-size:28rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(153,153,153,1);
+margin-top: 44rpx;
+}

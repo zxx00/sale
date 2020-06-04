@@ -1,0 +1,431 @@
+/* pages/home/home.wxss */
+
+page {
+  background-color: #f9f9f9;
+ width: 100%;
+ overflow-x: hidden;
+  
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+   overflow-x: hidden;
+}
+
+.top image {
+  width: 116rpx;
+  height: 116rpx;
+  border-radius: 50%;
+  margin: 11rpx 15rpx;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+}
+
+.integral {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 35%;
+}
+
+.register {
+  background: rgba(133, 197, 219, 1);
+  border-radius: 22rpx;
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+  margin-left: 15rpx;
+  padding:5rpx 0;
+  width: 160rpx;
+
+}
+.userinfo-nickname{
+  padding:5rpx 11rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  line-height: 44rpx;
+  margin-left: 15rpx;
+  width: 160rpx;
+  overflow:hidden; 
+text-overflow:ellipsis; 
+white-space:nowrap;
+}
+.integratel {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
+}
+
+/* 售后卡与优惠券 */
+
+.synthesis {
+  background-color: #fff;
+  display: flex;
+  width: 690rpx;
+  margin: 20rpx auto;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0rpx 1rpx 7rpx 0rpx rgba(163, 163, 163, 0.19);
+  border-radius: 10rpx;
+}
+
+.coupon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2rpx solid #f0efef;
+  margin: 30rpx 0;
+  padding: 0 120rpx;
+}
+
+.coupono {
+  font-size: 38rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(167, 167, 167, 1);
+}
+
+.couponclip {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+}
+
+.afterCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30rpx 120rpx;
+}
+
+.nothing {
+  font-size: 38rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(167, 167, 167, 1);
+}
+
+.number{
+font-size:38rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(108,166,181,1);
+}
+
+.afterCardClip {
+  font-size: 24rpx;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 1);
+}
+
+
+/* 领取优惠券 */
+.draw_state{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 285rpx;
+}
+.draw_state image{
+  width: 296rpx;
+  height: 270rpx;
+}
+.draw_state view{
+font-size:28rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(153,153,153,1);
+margin-top: 44rpx;
+}
+
+/* 领取中心 */
+.core{
+  margin-top: 40rpx;
+}
+.title{
+font-size:32rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(51,51,51,1);
+margin-left: 30rpx;
+}
+/* 优惠券列表 */
+.corelist {
+  position: relative;
+  text-align: center;
+  margin-top: 10rpx;
+}
+.coreters{
+  display: flex;
+  margin-left: 30rpx;
+  position: absolute;
+  top: 25rpx;
+  align-items: center;
+  width: 100%;
+   overflow-x: hidden;
+}
+.coreLeft{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%; 
+}
+.coreMoney{
+  display: flex;
+  align-items: flex-end;
+}
+.coreMoney view:nth-child(1){
+font-size:42rpx;
+font-family:Source Han Sans CN;
+font-weight:500;
+color:rgba(255,255,255,1);
+}
+.coreMoney view:nth-child(2){
+font-size:60rpx;
+font-family:MF ShangYa (Noncommercial);
+font-weight:400;
+color:rgba(255,255,255,1);
+}
+.coreConter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+.coreConter view:nth-child(1){
+font-size:28rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(51,51,51,1);
+}
+.coreConter view:nth-child(2){
+font-size:20rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(102,102,102,1);
+padding-top: 32rpx;
+}
+.corelist image{
+  height: 180rpx;
+  width: 690rpx;
+}
+.rule{
+font-size:24rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(255,255,255,1);
+margin-left: 10rpx;
+}
+
+.coreRight{
+  margin-left: 35rpx;
+  width:104rpx;
+height:40rpx;
+background:linear-gradient(-9deg,rgba(255,183,100,1) 0%,rgba(255,122,41,1) 100%);
+border-radius:20rpx;
+font-size:26rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(255,255,255,1);
+line-height: 40rpx;
+}
+.employ{
+    margin-left: 35rpx;
+  width:104rpx;
+height:40rpx;
+background:linear-gradient(180deg,rgba(133,204,219,1) 0%,rgba(158,216,229,1) 100%);
+border-radius:20rpx;
+font-size:26rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(255,255,255,1);
+line-height: 40rpx;
+}
+
+
+/* 弹窗 */
+
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-close {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  right: 10rpx;
+  top: 10rpx;
+}
+
+.modal-dialog {
+  position: fixed;
+  top: 41%;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  margin: -100rpx 100rpx;
+  width:578rpx;
+background:rgba(255,255,255,1);
+border-radius:25rpx;
+text-align: center;
+}
+.modal-dialog image{
+  width: 554rpx;
+  height: 255rpx;
+  margin-top: -110rpx;
+}
+
+.modal-content {
+font-size:26rpx;
+font-family:PingFang SC;
+font-weight:500;
+color:rgba(102,102,102,1);
+text-align: center;
+}
+
+.btn-confirm {
+ width:200rpx;
+height:60rpx;
+background:rgba(133,204,219,1);
+border-radius:30rpx;
+font-size:26rpx;
+font-family:PingFang SC;
+font-weight:bold;
+color:rgba(255,255,255,1);
+line-height: 60rpx;
+margin: 30rpx auto;
+}
+
+/* //弹出框 */
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.6;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+.commodity_attr_box {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 90rpx;
+  height: 70%;
+}
+
+.closeImg {
+  width: 60rpx;
+  height: 60rpx;
+  right: 10rpx;
+  position: fixed;
+  top:10rpx;
+
+}
+
+.useshuoming {
+  padding-left: 40rpx;
+  width: 710rpx;
+  height:100%;
+
+}
+
+.giftCard-num {
+  position: absolute;
+  top: 28rpx;
+  left: 40rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #000;
+  letter-spacing: 0;
+}
+
+.giftCard-useView {
+  height: 135rpx;
+  position: relative;
+}
+
+.orderCode {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #000;
+  margin-top: 27rpx;
+}
+
+.usePrice {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #ff7070;
+  letter-spacing: 0;
+  text-align: right;
+  position: absolute;
+  right: 40rpx;
+  top: 20rpx;
+}
+
+.useDate {
+  font-family: PingFangSC-Regular;
+  font-size: 12px;
+  color: #808080;
+  letter-spacing: 0;
+  margin-top: 16rpx;
+}
+
+.topLine {
+  background: rgba(0, 0, 0, 0.10);
+  height: 2rpx;
+  width: 720rpx;
+  top: 0rpx;
+}
+
+.useLogEmpty {
+  align-items: center;
+  justify-content: center;
+  font-family: PingFangSC-Regular;
+  font-size: 14px;
+  color: #808080;
+  letter-spacing: 0;
+  text-align: center;
+  height: 100%;
+}
+.tuikuan {
+  color: #000;
+}
+
+
+/* 授权手机号 */
+.pop_btn {
+  background: #fff;
+  font-family: PingFang SC;
+  color: #fff;
+  position: absolute;
+}
